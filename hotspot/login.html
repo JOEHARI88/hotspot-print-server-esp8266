@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> login</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="theme-color" content="#131423" />
+<meta http-equiv="pragma" content="no-cache" />
+<meta http-equiv="expires" content="-1" />
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;"/>
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/fontawesome.min.css">
+<link rel="icon" type="/x-icon" href="/favicon.ico">
+<script type="text/javascript" src="../js/jquery.min.js"></script> 
+</head>
+<body class="bg">
+  $(if chap-id)
+	<form name="sendin" action="$(link-login-only)" method="post">
+		<input type="hidden" name="username" />
+		<input type="hidden" name="password" />
+		<input type="hidden" name="dst" value="$(link-orig)" />
+		<input type="hidden" name="popup" value="true" />
+	</form>
+	<script type="text/javascript" src="/md5.js"></script>
+  <script type="text/javascript">
+  	<!--
+	    function doLogin() {
+		document.sendin.username.value = document.login.username.value;
+		document.sendin.password.value = hexMD5('$(chap-id)' + document.login.password.value + '$(chap-challenge)');
+		document.sendin.submit();
+		return false;
+	    }
+	//-->
+  </script>
+$(endif)
+	<div class="container">
+	<div class="logo bmh-50 text-center">
+<p id="logo"><b>voucher.id</b></p>
+	</div>
+		<p style="font-size:12px;text-align:center;margin-top:10px;margin-bottom:5px;color:red"><b>
+		  Silahkan login untuk mendapat akses internet </b></p>
+						<div class="bawah-judul text-grey"><span style="font-size:13px;color=#555">
+	<marquee id="marquee" behavior="scroll" direction="left" scrollamount="4"></marquee></span>
+	      </div>
+$(if error)
+<p style="margin-top:5px">
+<div class="alert alert-dismissible alert-info">
+ <small>$(error)</small>
+</div>
+$(endif)
+<p style="margin-top:10px">
+<button id="voucher" type="button" class="small-button1" ><i class="fa fa-ticket">&nbsp;&nbsp;</i>Voucher</button>
+<button id="member" type="button" class="small-button2" ><i class="fa fa-user">&nbsp;&nbsp;</i> Member</button>			
+
+<p style="margin-top:25px">
+     <div class="form-group">
+ <p id ="note" style="color:#fff;font-size:14px; text-align:center">Masukan kode voucher</p>
+ <form name="login" action="$(link-login-only)" method="post"
+	$(if chap-id) onSubmit="return doLogin()" $(endif)>
+	<input type="hidden" name="dst" value="$(link-orig)" />
+	<input type="hidden" name="popup" value="true" />
+	 <p style="margin-top:15px">
+<input id="inputusr" style="text-align:center;" type="text" class="form-control" name="username" value="$(username)" placeholder="Voucher code" required="required" autocomplete="off">
+<input id="inputpwd" style="text-align:center;" type="hidden" class="form-control" name="password" placeholder="Password" required="required" autocomplete="off">
+				<p style="margin-top:10px">
+<button id="kirim" type="button" class="button-gadang1"><i class="fa fa-sign-in">&nbsp;&nbsp;</i>LOGIN</button>
+</form>
+<p style="margin-top:5px">
+</div>
+
+<p style="margin-top:5px">
+  $(if trial == 'yes')
+								<p style="font-size:14px;text-align:center">
+Uji coba gratis klik  <a href="$(link-login-only)?dst=$(link-orig-esc)&amp;username=T-$(mac-esc)"><b> . Gratis</b></a>
+							  $(endif)
+				<p style="margin-top:15px">
+<p style="font-size:20px;text-align:center;"><b> PAKET VOUCHER </b>
+	<p style="margin-top:5px">
+					  <table class="table table-bordered table-hover mr-b-10">
+					  <thead>
+						<tr>
+								    <th>Voucher</th>
+										<th>Durasi</th>
+										<th>Keterangan</th>
+						</tr>
+					  </thead>
+					  <tbody align="center">
+					       <tr>
+									<td>Rp. 1.000</td>
+										<td>2 jam</td>
+										<td>Ready</td>
+									</tr>
+								<tr>
+									<td>Rp. 2.000</td>
+										<td>5 jam</td>
+										<td>Ready</td>
+									</tr>
+									<tr>
+									<td>Rp. 4.000</td>
+										<td>1 hari</td>
+										<td>Ready</td>
+										</tr>
+									<tr>
+									<td>Rp. 10.000</td>
+										<td>7 hari</td>
+										<td>Ready</td>
+									</tr>
+									<tr>
+									<td>Rp. 30.000</td>
+										<td>30 hari</td>
+										<td>Ready</td>
+									</tr>
+          </tbody>
+					</table>	
+					<p style="margin-top:5px">
+					<p style="font-size:12px;text-align:center;color:#fff;">Beli voucher hubungi wa:<br>087864935854 (Muklis)<br>
+					083846101110 (Hari)</p>	
+					
+					</div>
+	<div class="row">
+				<p style="margin-top:-5px">
+							
+									<p style="margin-top:5px">
+	<p style="margin-top:20px">
+<div class="text-center text-grey" style="font-size: 80%">&copy; Copyright 2022<br><a style="color: white" href="#">voucher.id</a> - All rights reserved
+</div>
+	</div>
+	<div id="popUp" class="bg-modal">
+		<div class="modal">
+			<div class="head-modal">
+				<h3>Kode voucher tersimpan</h3>
+				 <svg class="close-modal"  fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            	</svg>
+			</div>
+			<hr>
+			<div class="body-modal" style="text-align:center;">
+			<p id="popupContent">
+			</div>
+			<hr>
+				<div class="modal-footer">
+		 <div class="btn-group">
+			<button id="delete" class="btn btn-success"><b>Hapus</b></button>
+			<button id="use" class="btn btn-warning"><b>Gunakan </b></button>
+			</div>
+			</div>
+		</div>
+	</div>
+  <script type="text/javascript" src="../js/javascript.js"></script>
+</body>
+</html>
+
