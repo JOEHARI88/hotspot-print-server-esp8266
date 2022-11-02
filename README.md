@@ -11,4 +11,7 @@ Cara instalasi alat ini</br>
 9.pada kolom admin panel login masukkan sesuai keinginan.</br>
 10.pada kolom kode lisensi ,isi sembarang aja untuk uji coba/ trial untuk membeli lisensi valid silahkan contact wa di 083846101110. </br>
 11.klik install masuk ke install step2</br>
-12.copy semua text di text area buka winbox buka terminal dan paste di terminal kemudian klik enter, atau bisa dengan cara menambahkan manual dengan buka winbox <b>ip->hotspot->IP binding</b>
+12.di setep ini ada 2 cara:</br>
+A.copy semua text di text area buka winbox buka terminal dan paste di terminal kemudian klik enter, untuk cara ini kita bisa lihat IP address esp8266 di <b>ip->hotspot->Host</b> namun IP sewaktu waktu bisa berubah, buat static di <b>ip->hotspot->IP binding</b> Dan tentukan di To address alamat ipnya.</br>
+B.tambahkan manual dengan copy Mac address saja di text area buka winbox <b>ip->hotspot->IP binding</b> Mac address isikan Mac address yang tadi sudah di copy, To address bisa di isikan IP address untuk esp agar static ,type pilih bypassed.
+
