@@ -17,5 +17,6 @@ B.tambahkan manual dengan copy Mac address saja di text area buka winbox <b>ip->
 
 </br>
 <b>Keterangan</b></br>
+-led menyala saja tidak berkedip artinya sedang menghubungkan ke jaringan wifi, led berkedip pelan artinya mode ap /install mode/tidak dapat terhubung ke jaringan wifi,led berkedip cepat artinya alat sudah terhubung ke jaringan wifi Dan bekerja,led tidak menyala artinya terjadi error pada alat.</br>
 -untuk login menggunakan scan qr code Dan login otomatis silahkan gunakan login page yang sudah disediakan</br>
 
